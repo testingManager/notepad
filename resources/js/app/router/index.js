@@ -11,11 +11,11 @@ const routes = [
         component: () => import('../views/Home'),
         beforeEnter: authGuard
     },
-    {
+    /*{
         path: '/register',
         component: () => import('../views/auth/Register'),
         beforeEnter: isLogged
-    },
+    },*/
     {
         path: '/login',
         component: () => import('../views/auth/Login'),
