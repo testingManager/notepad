@@ -1,5 +1,10 @@
 <template>
     <div>
+        <v-row dense >
+            <v-col cols="6">
+                <popular-prompt-component />
+            </v-col>
+        </v-row>
         <v-row class="mt-16">
             <v-col cols="8">
                 <v-row>
@@ -72,9 +77,11 @@
 <script>
 import axios from 'axios';
 import { mapActions } from 'vuex';
+import PopularPromptComponent from "../components/common/PopularPromptComponent";
 
 export default {
     name: "Home",
+    components: {PopularPromptComponent},
     data: () => ({
         categories: [],
         items: [

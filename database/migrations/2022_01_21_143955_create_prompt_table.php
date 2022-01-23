@@ -17,13 +17,13 @@ class CreatePromptTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('user_id')->nullable(false);
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->unsignedBigInteger('category_id')->nullable(false);
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
             $table->unsignedBigInteger('section_id')->nullable(false);
-            $table->foreign('section_id')->references('id')->on('sections');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
 
             $table->string('title');
             $table->text('code');

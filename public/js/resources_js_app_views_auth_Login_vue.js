@@ -296,16 +296,12 @@ var render = function () {
       _c(
         "v-card-actions",
         [
-          _c("router-link", { attrs: { to: "/register" } }, [
-            _vm._v("Registration"),
-          ]),
-          _vm._v(" "),
           _c("v-spacer"),
           _vm._v(" "),
           _c(
             "v-btn",
             { attrs: { color: "primary" }, on: { click: _vm.login } },
-            [_vm._v("\n            sign-in\n        ")]
+            [_vm._v("\n                sign-in\n            ")]
           ),
         ],
         1

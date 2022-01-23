@@ -2497,13 +2497,13 @@ var routes = [{
     return __webpack_require__.e(/*! import() */ "resources_js_app_views_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Home */ "./resources/js/app/views/Home.vue"));
   },
   beforeEnter: _authGuard__WEBPACK_IMPORTED_MODULE_0__["default"]
-}, {
-  path: '/register',
-  component: function component() {
-    return __webpack_require__.e(/*! import() */ "resources_js_app_views_auth_Register_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/auth/Register */ "./resources/js/app/views/auth/Register.vue"));
-  },
-  beforeEnter: _isLogged__WEBPACK_IMPORTED_MODULE_1__["default"]
-}, {
+},
+/*{
+    path: '/register',
+    component: () => import('../views/auth/Register'),
+    beforeEnter: isLogged
+},*/
+{
   path: '/login',
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_app_views_auth_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/auth/Login */ "./resources/js/app/views/auth/Login.vue"));
@@ -68129,7 +68129,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_app_views_Home_vue":1,"resources_js_app_views_auth_Register_vue":1,"resources_js_app_views_auth_Login_vue":1,"resources_js_app_views_timestamp_Timestamp_vue":1,"resources_js_app_views_base64_Base64_vue":1,"resources_js_app_views_category_ListSections_vue":1,"resources_js_app_views_category_AddCategory_vue":1,"resources_js_app_views_category_section_Section_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_app_views_Home_vue":1,"resources_js_app_views_auth_Login_vue":1,"resources_js_app_views_timestamp_Timestamp_vue":1,"resources_js_app_views_base64_Base64_vue":1,"resources_js_app_views_category_ListSections_vue":1,"resources_js_app_views_category_AddCategory_vue":1,"resources_js_app_views_category_section_Section_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

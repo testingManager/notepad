@@ -59,6 +59,15 @@ class PromptRepository extends AbstractRepository
             ->get();
     }
 
+    public function populars(int $id, int $count)
+    {
+        return $this->startConditions()
+            ->where('user_id', $id)
+            ->orderBy('rating', 'desc')
+            ->limit($count)
+            ->get();
+    }
+
     protected function getModelClass(): string
     {
         return Model::class;

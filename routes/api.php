@@ -52,6 +52,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('delete', [PromptController::class, 'delete']);
         Route::post('update', [PromptController::class, 'update']);
         Route::get('search/{search}', [PromptController::class, 'search']);
+        Route::get('populars', [PromptController::class, 'populars']);
     });
 
     Route::prefix('base64')->group(function () {

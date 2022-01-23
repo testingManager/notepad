@@ -55,4 +55,10 @@ class PromptController extends Controller
     {
         return response()->json($repository->search(urldecode($search)));
     }
+
+    public function populars(PromptRepository $repository): JsonResponse
+    {
+        $populars = $repository->populars(Auth::id(), 5);
+        return response()->json(['status' => 'success', 'popular' => $populars]);
+    }
 }

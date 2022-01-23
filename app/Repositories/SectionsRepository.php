@@ -40,9 +40,7 @@ class SectionsRepository extends AbstractRepository
     public function section(int $userId, int $categoryId, int $sectionId)
     {
         return $this->startConditions()
-            ->where('user_id', $userId)
-            ->orWhere('category_id', $categoryId)
-            ->orWhere('id', $sectionId)
+            ->where(['user_id' => $userId, 'category_id' => $categoryId, 'id' => $sectionId])
             ->first();
     }
 

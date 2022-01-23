@@ -8,7 +8,7 @@
             </v-form>
         </v-card-text>
         <v-card-actions>
-            <router-link to="/register">Registration</router-link>
+<!--            <router-link to="/register">Registration</router-link>-->
             <v-spacer />
             <v-btn color="primary" @click="login">
                 sign-in
